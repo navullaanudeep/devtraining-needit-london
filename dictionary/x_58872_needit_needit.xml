@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
+    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" sizeclass="11" type="collection">
         <element attributes="edge_encryption_enabled=true" choice="1" default="legal" label="requested type" mandatory="true" max_length="40" name="u_choice_3" type="string">
             <choice>
                 <element inactive_on_update="false" label="human resources" sequence="0" value="hr"/>
@@ -18,9 +18,11 @@
                 <element inactive_on_update="false" label="legal 2" sequence="5" value="legal 2"/>
                 <element inactive_on_update="false" label="your dep choice 1" sequence="6" value="your dep choice 1"/>
                 <element inactive_on_update="false" label="youe dep choice 2" sequence="7" value="youe dep choice 2"/>
+                <element inactive_on_update="false" label="others" sequence="8" value="others"/>
             </choice>
         </element>
         <element label="when needed" mandatory="true" max_length="40" name="u_glide_date_time_1" type="glide_date_time"/>
-        <element label="requetsted for" mandatory="true" max_length="32" name="u_reference_2" reference="x_58872_needit_needit" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="others" max_length="40" name="u_others" type="string"/>
+        <element label="requetsted for" mandatory="true" max_length="32" name="u_reference_2" reference="sys_user" type="reference"/>
     </element>
 </database>
